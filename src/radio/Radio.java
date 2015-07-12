@@ -20,8 +20,9 @@ public class Radio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        RadioGrafico radio = new RadioGrafico();
-        radio.setVisible(true);
+        Radio radio = new Radio();
+        RadioGrafico radioGraf = new RadioGrafico();
+        radioGraf.setVisible(true);
     }
     /**
      * @return the frecuencia
