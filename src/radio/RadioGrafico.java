@@ -14,12 +14,20 @@ import javax.swing.JButton;
  */
 public class RadioGrafico extends javax.swing.JFrame {
 
+    Datos datos = new Datos();
+    BotonCambioEstacion btnEstacion = new BotonCambioEstacion();
+    BotonFrecuencia btnFrec = new BotonFrecuencia();
+    BotonOnOff botonOnOff = new BotonOnOff();
+    
+    
+    
     /**
      * Creates new form RadioGrafico
      */
     public RadioGrafico() {
         initComponents();
         initComponentsMod();
+        
     }
 
     /**
@@ -55,6 +63,7 @@ public class RadioGrafico extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -204,6 +213,8 @@ public class RadioGrafico extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
+        jLabel4.setText("jLabel4");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -248,16 +259,23 @@ public class RadioGrafico extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton20))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(47, 47, 47)
+                                                .addComponent(jLabel2))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(33, 33, 33)
+                                                .addComponent(jLabel4)))
                                         .addGap(71, 71, 71)
                                         .addComponent(jButton16)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton17))
-                                    .addComponent(jButton20))
+                                        .addComponent(jButton17)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,26 +316,30 @@ public class RadioGrafico extends javax.swing.JFrame {
                             .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -351,7 +373,7 @@ public class RadioGrafico extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BotonOnOff botonOnOff = new BotonOnOff();
+        //BotonOnOff botonOnOff = new BotonOnOff();
         botonOnOff.encender();
         botonOnOff.setEstado(true);
         if (botonOnOff.isEstado() == true) {
@@ -360,12 +382,14 @@ public class RadioGrafico extends javax.swing.JFrame {
             jButton18.setEnabled(true);     //FM
             jButton1.setEnabled(false);     //ON
         }
+        datos.setEstado(true);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         initComponentsMod();
         jButton1.setEnabled(true);
+        datos.setEstado(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -421,7 +445,9 @@ public class RadioGrafico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        BotonFrecuencia btnFrec = new BotonFrecuencia();
+        datos.setFrecuencia("AM");
+        
+        //BotonFrecuencia btnFrec = new BotonFrecuencia();
         btnFrec.setFrecuencia("AM");
         if(btnFrec.getFrecuencia()=="AM"){
             jButton21.setBackground(green);                             //AM led
@@ -429,10 +455,12 @@ public class RadioGrafico extends javax.swing.JFrame {
             btnFrec.efFrec(btnFrec.getFrecuencia());                    //Segun la frecuencia, establecerá la emisora inicial.
             String convert = String.valueOf(btnFrec.getEstacion());     //Convertir a String, el valor float
             jLabel1.setText(convert);                                   //Estacion
+            datos.setEstacion(btnFrec.getEstacion());                   //Guarda en la clase de datos, la estacion
             if(jButton16.isEnabled()==false){                           //Por si solo se cambia de frecuencia
                 activarBotones();
             }
         }
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -440,7 +468,9 @@ public class RadioGrafico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        BotonFrecuencia btnFrec = new BotonFrecuencia();
+         //BotonFrecuencia btnFrec = new BotonFrecuencia();
+        
+        datos.setFrecuencia("FM");
         btnFrec.setFrecuencia("FM");
         if(btnFrec.getFrecuencia()=="FM"){
             jButton22.setBackground(green);                             //FM led
@@ -448,19 +478,23 @@ public class RadioGrafico extends javax.swing.JFrame {
             btnFrec.efFrec(btnFrec.getFrecuencia());                    //Segun la frecuencia, establecerá la emisora inicial.
             String convert = String.valueOf(btnFrec.getEstacion());     //Convertir a String, el valor float
             jLabel1.setText(convert);                                   //Estacion
+            datos.setEstacion(btnFrec.getEstacion());                   //Guarda en la clase de datos, la estacion
             if(jButton16.isEnabled()==false){                           //Por si solo se cambia de frecuencia
                 activarBotones();
             }
         }
+        
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        BotonCambioEstacion btnEstacion = new BotonCambioEstacion();
-        btnEstacion.setFrecuencia("AM");                        //De prueba
-        jLabel2.setText(btnEstacion.getFrecuencia());           //De prueba
-        btnEstacion.cambiarEstacionBajar(btnEstacion.getFrecuencia());
-        String convert = String.valueOf(btnEstacion.getEstacion());     //Convertir a String, el valor float
-        jLabel1.setText(convert);
+        /**String con = String.valueOf(datos.getEstacion());       //Prueba
+        *jLabel2.setText(con);                                   //Prueba
+        jLabel4.setText(datos.getFrecuencia());                 //Prueba*/
+        //BotonCambioEstacion btnEstacion = new BotonCambioEstacion();    
+        
+        btnEstacion.cambiarEstacionBajar(datos.getFrecuencia(), datos.getEstacion());    //Determina como es el cambio de la estacion
+        String convert = String.valueOf(btnEstacion.getEstacion());                 //Convertir a String, el valor float
+        jLabel1.setText(convert);                                           //Cambia el texto de la estacion
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void activarBotones(){
@@ -541,5 +575,6 @@ public class RadioGrafico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
