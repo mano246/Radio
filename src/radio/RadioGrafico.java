@@ -288,9 +288,9 @@ public class RadioGrafico extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -456,9 +456,11 @@ public class RadioGrafico extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         BotonCambioEstacion btnEstacion = new BotonCambioEstacion();
-        btnEstacion.setFrecuencia("AM");
-        jLabel2.setText(btnEstacion.getFrecuencia());
-        btnEstacion.cambiarEstacion(btnEstacion.getFrecuencia());
+        btnEstacion.setFrecuencia("AM");                        //De prueba
+        jLabel2.setText(btnEstacion.getFrecuencia());           //De prueba
+        btnEstacion.cambiarEstacionBajar(btnEstacion.getFrecuencia());
+        String convert = String.valueOf(btnEstacion.getEstacion());     //Convertir a String, el valor float
+        jLabel1.setText(convert);
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void activarBotones(){
