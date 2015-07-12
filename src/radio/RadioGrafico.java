@@ -180,6 +180,11 @@ public class RadioGrafico extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         jButton16.setText("<<");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setText(">>");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -443,6 +448,12 @@ public class RadioGrafico extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        BotonCambioEstacion btnEstacion = new BotonCambioEstacion();
+        btnEstacion.setFrecuencia("AM");
+        btnEstacion.cambiarEstacion(btnEstacion.getFrecuencia());
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     private void activarBotones(){
         jButton16.setEnabled(true);     //Estacion anterior
