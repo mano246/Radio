@@ -18,12 +18,13 @@ public class BotonCambioEstacion extends Radio {
     public void cambiarEstacion(String frecuencia) {
         float estacionTemp = getEstacion();
         if ("AM".equals(frecuencia)) {
-            if (estacionTemp == 530.0F) {
+            if (estacionTemp == 530.0) {
                 setEstacion(1610.0F);
             } else {
                 setEstacion(1610.0F);
             }
-        } else {
+        } 
+        else {
             setEstacion(89.7F);
         }
     }
