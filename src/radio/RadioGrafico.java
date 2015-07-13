@@ -18,8 +18,8 @@ public class RadioGrafico extends javax.swing.JFrame {
     BotonCambioEstacion btnEstacion = new BotonCambioEstacion();
     BotonFrecuencia btnFrec = new BotonFrecuencia();
     BotonOnOff botonOnOff = new BotonOnOff();
-    
-    
+    int contador;
+
     
     /**
      * Creates new form RadioGrafico
@@ -27,7 +27,7 @@ public class RadioGrafico extends javax.swing.JFrame {
     public RadioGrafico() {
         initComponents();
         initComponentsMod();
-        
+        contador = 0;
     }
 
     /**
@@ -393,7 +393,17 @@ public class RadioGrafico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        
+        
+        contador = contador+1;
+        //jLabel4.setText(String.valueOf(contador));            //Prueba
+        if (contador > 2){
+            //jLabel2.setText("Holi");                  //Prueba
+            jLabel2.setText(""); 
+            //Aqui debe de guardar una emisora
+        } else {
+            jLabel2.setText("Holi"); 
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -441,7 +451,7 @@ public class RadioGrafico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
+        // Subir emisora
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -459,8 +469,7 @@ public class RadioGrafico extends javax.swing.JFrame {
             if(jButton16.isEnabled()==false){                           //Por si solo se cambia de frecuencia
                 activarBotones();
             }
-        }
-        
+        }        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -495,6 +504,8 @@ public class RadioGrafico extends javax.swing.JFrame {
         btnEstacion.cambiarEstacionBajar(datos.getFrecuencia(), datos.getEstacion());    //Determina como es el cambio de la estacion
         String convert = String.valueOf(btnEstacion.getEstacion());                 //Convertir a String, el valor float
         jLabel1.setText(convert);                                           //Cambia el texto de la estacion
+        
+        
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void activarBotones(){
