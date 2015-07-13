@@ -18,7 +18,7 @@ public class RadioGrafico extends javax.swing.JFrame {
     BotonCambioEstacion btnEstacion = new BotonCambioEstacion();
     BotonFrecuencia btnFrec = new BotonFrecuencia();
     BotonOnOff botonOnOff = new BotonOnOff();
-    int contador;
+    BotonIniFav btnFavs = new BotonIniFav();
 
     
     /**
@@ -27,7 +27,6 @@ public class RadioGrafico extends javax.swing.JFrame {
     public RadioGrafico() {
         initComponents();
         initComponentsMod();
-        contador = 0;
     }
 
     /**
@@ -393,9 +392,9 @@ public class RadioGrafico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 1);
         
-        
-        contador = contador+1;
+        /**contador = contador+1;
         //jLabel4.setText(String.valueOf(contador));            //Prueba
         if (contador > 2){
             //jLabel2.setText("Holi");                  //Prueba
@@ -403,7 +402,7 @@ public class RadioGrafico extends javax.swing.JFrame {
             //Aqui debe de guardar una emisora
         } else {
             jLabel2.setText("Holi"); 
-        }
+        }**/
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
