@@ -25,7 +25,7 @@ public class BotonCambioEstacion extends Radio {
                setEstacion(1610.0F);
             } 
             else {                                                          //De lo contrario, que solo se le vaya restando 10 a la estacion
-                float estacionTemp1 = estacion - 10F;
+                //float estacionTemp1 = estacion - 10F;
                 setEstacion(estacion - 10.0F);
             }
         } 
@@ -34,7 +34,7 @@ public class BotonCambioEstacion extends Radio {
                 setEstacion(107.9F);
             }
             else {
-                float estacionTemp2 = estacion - 0.2F;                   //De lo contrario, que solo se le vaya restando 0.2 a la estacion
+                //float estacionTemp2 = estacion - 0.2F;                   //De lo contrario, que solo se le vaya restando 0.2 a la estacion
                 setEstacion(estacion - 0.2F);
             }
         
