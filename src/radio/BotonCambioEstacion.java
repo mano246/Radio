@@ -25,17 +25,17 @@ public class BotonCambioEstacion extends Radio {
                setEstacion(1610.0F);
             } 
             else {                                                          //De lo contrario, que solo se le vaya restando 10 a la estacion
-                //float estacionTemp1 = estacion - 10F;
-                setEstacion(estacion - 10.0F);
+                float restaAM = estacion - 10.0F;
+                setEstacion(restaAM);
             }
         } 
         if("FM".equals(frecuencia)){                                          //Si la frecuencia es FM
             if(estacionTemp.equals("89.7")){                                  //Si la estacion actual, es la primera, que pase a la ultima y para abajo...
                 setEstacion(107.9F);
             }
-            else {
-                //float estacionTemp2 = estacion - 0.2F;                   //De lo contrario, que solo se le vaya restando 0.2 a la estacion
-                setEstacion(estacion - 0.2F);
+            else {                                                               //De lo contrario, que solo se le vaya restando 0.2 a la estacion
+                float restaFM = estacion - 0.2F;                  
+                setEstacion(restaFM);
             }
         
         
