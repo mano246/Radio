@@ -12,28 +12,45 @@ package radio;
 public class BotonIniFav extends Radio{
     
     private boolean iniciarFav;         //Para poder establecer un nuevo favorito
-    private float estacionFM[];
-    private float estacionAM[];
+    private float[] estacionFM;
+    private float[] estacionAM;
     
     public BotonIniFav(){
         iniciarFav = false;
+        estacionFM = new float[5];
+        estacionAM = new float[5];
     }
     
     public void defBoton(String frecuencia, float estacion, int boton){
         setIniciarFav(true);
-        if(iniciarFav == true){
+        if(isIniciarFav() == true){
             nuevoFavorito(frecuencia, estacion, boton);
         }
     }
     
     public void nuevoFavorito(String frecuencia, float estacion, int boton){
+        int espacioNuevo = boton - 1;            //Es menos 1, porque las casillas del arreglo inician en 0.
         if (frecuencia.equals("AM")){
-            
+            estacionAM[espacioNuevo] = estacion;
             //Usar la de float estacionAM
         }
         if (frecuencia.equals("FM")){
+            estacionFM[espacioNuevo] = estacion;
             //Usar la de floar estacionFM
         }
+    }    
+    
+    public void ingresarFavorito(String frecuencia, int boton){
+        int espacioIng = boton - 1;
+        if (frecuencia.equals("AM")){
+            estacionAM[espacioNuevo] = estacion;
+            //Usar la de float estacionAM
+        }
+        if (frecuencia.equals("FM")){
+            estacionFM[espacioNuevo] = estacion;
+            //Usar la de floar estacionFM
+        }
+    
     }
 
     /**
@@ -48,34 +65,6 @@ public class BotonIniFav extends Radio{
      */
     public void setIniciarFav(boolean iniciarFav) {
         this.iniciarFav = iniciarFav;
-    }
-
-    /**
-     * @return the estacionFM
-     */
-    public float[] getEstacionFM() {
-        return estacionFM;
-    }
-
-    /**
-     * @param estacionFM the estacionFM to set
-     */
-    public void setEstacionFM(float[] estacionFM) {
-        this.estacionFM = estacionFM;
-    }
-
-    /**
-     * @return the estacionAM
-     */
-    public float[] getEstacionAM() {
-        return estacionAM;
-    }
-
-    /**
-     * @param estacionAM the estacionAM to set
-     */
-    public void setEstacionAM(float[] estacionAM) {
-        this.estacionAM = estacionAM;
     }
     
 }
