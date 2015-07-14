@@ -392,17 +392,9 @@ public class RadioGrafico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 1);
+        btnFavs.verFavorito(datos.getFrecuencia(), 1);          //Esto es para acceder al favorito
+        btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 1);        //Si se deja presionado
         
-        /**contador = contador+1;
-        //jLabel4.setText(String.valueOf(contador));            //Prueba
-        if (contador > 2){
-            //jLabel2.setText("Holi");                  //Prueba
-            jLabel2.setText(""); 
-            //Aqui debe de guardar una emisora
-        } else {
-            jLabel2.setText("Holi"); 
-        }**/
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
