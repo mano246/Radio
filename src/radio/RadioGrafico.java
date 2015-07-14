@@ -393,62 +393,110 @@ public class RadioGrafico extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         btnFavs.verFavorito(datos.getFrecuencia(), 1);          //Esto es para acceder al favorito
-        btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 1);        //Si se deja presionado
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+        
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 1);        //Si se deja presionado
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 2);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 2);        //Si se deja presionado
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 3);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 3);        //Si se deja presionado
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 4);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 4);        //Si se deja presionado
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 5);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 5);        //Si se deja presionado
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 6);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 6);        //Si se deja presionado
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 7);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 7);        //Si se deja presionado
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 8);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 8);        //Si se deja presionado
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 9);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 9);        //Si se deja presionado
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 10);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 10);        //Si se deja presionado
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 11);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 11);        //Si se deja presionado
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
+        btnFavs.verFavorito(datos.getFrecuencia(), 12);          //Esto es para acceder al favorito
+        String convertFav = String.valueOf(datos.getEstacion());
+        jLabel1.setText(convertFav);
+
+        //btnFavs.defBoton(datos.getFrecuencia(), datos.getEstacion(), 12);        //Si se deja presionado
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // Subir emisora
+         
+        btnEstacion.cambiarEstacionArriba(datos.getFrecuencia(), datos.getEstacion());    //Determina como es el cambio de la estacion
+        String convert = String.valueOf(btnEstacion.getEstacion());                 //Convertir a String, el valor float
+        jLabel1.setText(convert);                                           //Cambia el texto de la estacion
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         datos.setFrecuencia("AM");
-        
-        //BotonFrecuencia btnFrec = new BotonFrecuencia();
         btnFrec.setFrecuencia("AM");
         if(btnFrec.getFrecuencia()=="AM"){
             jButton21.setBackground(green);                             //AM led
