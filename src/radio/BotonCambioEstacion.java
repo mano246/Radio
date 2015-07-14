@@ -37,8 +37,29 @@ public class BotonCambioEstacion extends Radio {
                 float restaFM = estacion - 0.2F;                  
                 setEstacion(restaFM);
             }
+        }
+    }
+    
+    public void cambiarEstacionArriba(String frecuencia, float estacion){
+        String estacionTemp1 = String.valueOf(estacion);
         
-        
+        if("AM".equals(frecuencia)){
+            if(estacionTemp1.equals("1610.0")){
+                setEstacion(530.0F);
+            }
+            else{
+                float sumaAM = estacion + 10.0F;
+                setEstacion(sumaAM);
+            }
+        }
+        if("FM".equals(frecuencia)){
+            if(estacionTemp1.equals("107.6")){
+                setEstacion(87.9F);
+            }
+            else{
+                float sumaFM = estacion + 0.2F;
+                setEstacion(sumaFM);
+            }
         }
     }
 }
