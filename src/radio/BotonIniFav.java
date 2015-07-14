@@ -21,8 +21,8 @@ public class BotonIniFav extends Radio implements ActionListener{
     
     public BotonIniFav(){
         iniciarFav = false;
-        estacionFM = new float[5];
-        estacionAM = new float[5];
+        estacionFM = new float[11];
+        estacionAM = new float[11];
     }
     
     public void defBoton(String frecuencia, float estacion, int boton){
