@@ -19,10 +19,10 @@ public class BotonFrecuencia extends Radio{
     
     public void efFrec(String frecuencia){
         if ("AM".equals(getFrecuencia())){
-            setEstacion(530.0F);
+            setEstacion(530.0);
         }
         else{
-            setEstacion(89.7F);
+            setEstacion(89.7);
         }
        }
 }
