@@ -12,7 +12,7 @@ package radio;
 public class Radio {
 
        
-   protected float estacion;
+   protected double estacion;
    protected boolean estado;
    protected String frecuencia;
 
@@ -41,14 +41,14 @@ public class Radio {
     /**
      * @return the estacion
      */
-    public float getEstacion() {
+    public double getEstacion() {
         return estacion;
     }
 
     /**
      * @param estacion the estacion to set
      */
-    public void setEstacion(float estacion) {
+    public void setEstacion(double estacion) {
         this.estacion = estacion;
     }
 
