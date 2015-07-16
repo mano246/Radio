@@ -16,7 +16,7 @@ public class BotonFavoritos extends Radio {
         this.estacion = 0.0F;
     }
 
-    public BotonFavoritos(String frecuencia, float estacion) {
+    public BotonFavoritos(String frecuencia, double estacion) {
         this.frecuencia = frecuencia;
         this.estacion = estacion;
     }
