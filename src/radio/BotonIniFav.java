@@ -16,27 +16,27 @@ import java.awt.event.MouseEvent;
 public class BotonIniFav extends Radio implements ActionListener{
     
     private boolean iniciarFav;         //Para poder establecer un nuevo favorito
-    private float[] estacionFM;
-    private float[] estacionAM;
+    private double[] estacionFM;
+    private double[] estacionAM;
     
     public BotonIniFav(){
         iniciarFav = false;
-        estacionFM = new float[11];
-        estacionAM = new float[11];
+        estacionFM = new double[11];
+        estacionAM = new double[11];
     }
     
-    public void defBoton(String frecuencia, float estacion, int boton){
+    public void defBoton(String frecuencia, double estacion, int boton){
         setIniciarFav(true);
         if(isIniciarFav() == true){
             nuevoFavorito(frecuencia, estacion, boton);
         }
     }
     
-    public void nuevoFavorito(String frecuencia, float estacion, int boton){
+    public void nuevoFavorito(String frecuencia, double estacion, int boton){
         int espacioNuevo = boton - 1;            //Es menos 1, porque las casillas del arreglo inician en 0.
         if (frecuencia.equals("AM")){
             estacionAM[espacioNuevo]= estacion;
-            //Usar la de float estacionAM
+            //Usar la de double estacionAM
         }
         if (frecuencia.equals("FM")){
             estacionFM[espacioNuevo]= estacion;
@@ -46,10 +46,10 @@ public class BotonIniFav extends Radio implements ActionListener{
     
     public void verFavorito(String frecuencia, int boton){
         int espacioIng = boton - 1;
-        float estacionFav = 0.0F;
+        double estacionFav = 0.0F;
         if (frecuencia.equals("AM")){
             estacionFav = getEstacionAM()[espacioIng];
-            //Usar la de float estacionAM
+            //Usar la de double estacionAM
         }
         if (frecuencia.equals("FM")){
              estacionFav = getEstacionFM()[espacioIng];
@@ -75,23 +75,20 @@ public class BotonIniFav extends Radio implements ActionListener{
     /**
      * @return the estacionFM
      */
-    public float[] getEstacionFM() {
+    public double[] getEstacionFM() {
         return estacionFM;
     }
 
     /**
      * @return the estacionAM
      */
-    public float[] getEstacionAM() {
+    public double[] getEstacionAM() {
         return estacionAM;
     }
-    
-    public void mousePressed(MouseEvent e){
-        System.exit(0);
-    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
