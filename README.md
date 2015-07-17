@@ -5,3 +5,5 @@ Sección 20
 
 Autor: Manolo Estuardo Ramírez Aguilar
 Carné: 14005 
+
+Incluye: Las clases y las JUnit.
